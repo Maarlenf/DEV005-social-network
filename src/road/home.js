@@ -1,4 +1,5 @@
 import logo from '../image/logo.png';
+import { addAccount } from '../lib/auth';
 
 function home() {
   const templateLogin = `<header>
@@ -22,6 +23,7 @@ function home() {
     </form>
   </main>`;
 
+  addAccount('jaja@jaja.com', '123456');
   return templateLogin;
 }
 export default home;
