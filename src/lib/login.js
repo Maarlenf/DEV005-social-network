@@ -7,10 +7,10 @@ export const start = (email, password) => {
   const auth = getAuth();
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Signed in
-
+    // Signed in
       // eslint-disable-next-line no-unused-vars
       const user = userCredential.user;
+    // ...
     })
     .catch((error) => {
       const errorCode = error.code;

@@ -70,29 +70,57 @@ function register() {
   sectionGeneral.append(
     labelRegister,
     formSingUp,
+    buttonSingUp,
     divAling,
     pGoogle,
     buttonGoogle,
   );
   divAling.append(pSingUp, aLinkIn);
   labelRegister.appendChild(titleRegister);
-  formSingUp.append(
-    labelmailUp,
-    inputemailUp,
-    labelpassUp,
-    inputpassUp,
-    pError,
-    buttonSingUp,
-  );
+  formSingUp.append(labelmailUp, inputemailUp, labelpassUp, inputpassUp, pError, buttonSingUp);
   buttonGoogle.appendChild(google);
+
   formSingUp.addEventListener('submit', (e) => {
     e.preventDefault();
     const email = document.getElementById('emailsingUp').value;
     const password = document.getElementById('passingUp').value;
     addAccount(email, password);
-    console.log('lo estamos logrando');
   });
-
   return main;
 }
 export default register;
+/* const register = () => {
+  const section = document.createElement('div');
+  const templateLogin = `<header>
+    <img id="login" src=${logo} alt="Logo Cocktail Network" />
+  </header>
+  <main>
+    <label id="welcome">
+      <h2 class="welcome">Registro</h2>
+    </label>
+    <form class="container1">
+      <label for="email" class="email">Email</label>
+      <input type="email" id="emailRegister"
+      class="text" value="" autocomplete = "username" placeholder="mariaX@gmail.com"/>
+      <label for="password" class="password">Contraseña</label>
+      <input type="password" id="pass"
+      class="text" value=""  autocomplete="current-password" placeholder="******" />
+      <button id="register" type="submit">Guardar</button>
+
+      <button id="back">Regresar</button>
+      <label for="text" class="singInG">O inicia con:</label>
+      <button id="googleRegister" href="">Google</button>
+    </form>
+  </main>`;
+  section.innerHTML = templateLogin;
+  const form = section.querySelector('.container1');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('emailRegister').value;
+    const password = document.getElementById('pass').value;
+    addAccount(email, password);
+    // console.log('jajajajja');
+  });
+  return section;
+};
+export default register; */

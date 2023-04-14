@@ -2,14 +2,13 @@
 import home from './components/home.js';
 import error from './components/error.js';
 import register from './components/register.js';
-// import { addAccount } from './lib/auth.js';
 
 const root = document.getElementById('root');
 
 const routes = [
   { path: '/', components: home },
-  { path: '/register', components: register },
   { path: '/error', components: error },
+  { path: '/register', components: register },
 ];
 
 const defaultRoute = '/';
@@ -37,17 +36,3 @@ window.onpopstate = () => {
 };
 
 navigateTo(window.location.pathname || defaultRoute);
-/*
-const btnGoRegister = document.getElementById('singUp');
-if (btnGoRegister) {
-  btnGoRegister.addEventListener('click', () => {
-    navigateTo('/register');
-  });
-}
-const btnBack = document.getElementById('back');
-if (btnBack) {
-  btnBack.addEventListener('click', () => {
-    root.innerHTML = '';
-    navigateTo('/');
-  });
-} */
