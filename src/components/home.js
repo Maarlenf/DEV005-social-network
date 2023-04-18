@@ -1,4 +1,3 @@
-import logo from '../image/logo.png';
 import { start } from '../lib/login';
 
 // CREACION DE NODOS
@@ -19,13 +18,12 @@ function home() {
   const divAling = document.createElement('div');
   const pSingUp = document.createElement('p');
   const aLink = document.createElement('a');
-  // const buttonSingUp = document.createElement('button');
   const pGoogle = document.createElement('p');
   const buttonGoogle = document.createElement('button');
   const google = document.createElement('div');
 
   // ATRIBUTOS
-  img.src = logo;
+  img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
   titleWelcome.textContent = 'Bienvenido';
@@ -50,7 +48,6 @@ function home() {
   inputPass.value = '';
   inputPass.placeholder = '********';
   inputPass.autocomplete = 'current-password';
-  pError.textContent = '';
   pError.className = 'pErrorIn';
   buttonSingIn.textContent = 'Ingresar';
   buttonSingIn.id = 'singIn';
@@ -67,6 +64,7 @@ function home() {
   buttonGoogle.id = 'googleSingup';
   buttonGoogle.className = 'googlesingU';
   google.className = 'google';
+
   // APLICACION APPEND
   main.append(header, sectionGeneral);
   header.append(img);
@@ -88,46 +86,8 @@ function home() {
     const email = document.getElementById('emailsingIn').value;
     const password = document.getElementById('passingIn').value;
     start(email, password);
-    // console.log('daaaaa');
   });
-
   return main;
 }
+
 export default home;
-
-/* const home = () => {
-  const section = document.createElement('div');
-  const templateLogin = `<header>
-    <img id="login" src=${logo} alt="Logo Cocktail Network" />
-  </header>
-  <main>
-    <label id="welcome">
-      <h1 class="welcome">Bienvenid@</h1>
-    </label>
-    <form class="container">
-      <label for="email" class="email">Email</label>
-      <input type="email" id="email" class="text" value="" autocomplete = "username"
-      placeholder="mariaX@gmail.com"/>
-      <label for="password" class="password">Contraseña</label>
-      <input type="password" id="password" class="text" value=""
-      autocomplete="current-password" placeholder="******" />
-      <a href="" class="forget">¿Olvidaste tu Contraseña?</a>
-      <button id="singIn" type="submit">Ingresar</button>
-
-      <button id= "register">Registrarse</button>
-      <label for="text" class="singInG">O inicia con:</label>
-      <button id="google" href="">Google</button>
-    </form>
-  </main>`;
-  section.innerHTML = templateLogin;
-
-  const form = section.querySelector('.container');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    start(email, password);
-  });
-  return section;
-};
-export default home; */

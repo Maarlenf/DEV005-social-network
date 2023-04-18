@@ -1,5 +1,3 @@
-import logo from '../image/logo.png';
-
 function error() {
   // CREANDO NODOS
   const section = document.createElement('div');
@@ -9,7 +7,7 @@ function error() {
 
   // ATRIBUTOS
   section.className = 'error';
-  img.src = logo;
+  img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
   textError.textContent = 'Página no encontrada. Por favor dirígete a la página de';

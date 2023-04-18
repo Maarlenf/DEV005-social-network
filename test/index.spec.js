@@ -1,8 +1,29 @@
-// importamos la funcion que vamos a testear
-import { myFunction } from '../src/lib/index';
+/**
+ * @jest-environment jsdom
+ */
 
-describe('myFunction', () => {
-  it('debería ser una función', () => {
-    expect(typeof myFunction).toBe('function');
+import home from '../src/components/home';
+
+describe('home', () => {
+  test('Is a function', () => {
+    expect(typeof home).toBe('function');
+  });
+  test('Create DOM', () => {
+    const DOM = document.createElement('form');
+    DOM.append(home());
+    const haveAButton = DOM.querySelector('#singUp');
+    expect(haveAButton).not.toBe(undefined);
+  });
+  test('after submit form call start', () => {
+    const DOM = document.createElement('form');
+    DOM.append(home());
+    const form = DOM.querySelector('#formSingIn');
+    const email = form.querySelector('#emailsingIn');
+    const password = form.querySelector('#passingIn');
+    const start = jest.fn();
+    email.value = 'jaja@jaja.com';
+    password.value = '123456';
+    start(email, password);
+    expect(start).toHaveBeenCalledTimes(1);
   });
 });
