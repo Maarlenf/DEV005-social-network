@@ -1,4 +1,3 @@
-import logo from '../image/logo.png';
 import { start } from '../lib/login';
 
 // CREACION DE NODOS
@@ -19,13 +18,12 @@ function home() {
   const divAling = document.createElement('div');
   const pSingUp = document.createElement('p');
   const aLink = document.createElement('a');
-  // const buttonSingUp = document.createElement('button');
   const pGoogle = document.createElement('p');
   const buttonGoogle = document.createElement('button');
   const google = document.createElement('div');
 
   // ATRIBUTOS
-  img.src = logo;
+  img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
   titleWelcome.textContent = 'Bienvenido';
@@ -50,7 +48,6 @@ function home() {
   inputPass.value = '';
   inputPass.placeholder = '********';
   inputPass.autocomplete = 'current-password';
-  pError.textContent = '';
   pError.className = 'pErrorIn';
   buttonSingIn.textContent = 'Ingresar';
   buttonSingIn.id = 'singIn';
@@ -89,7 +86,6 @@ function home() {
     const email = document.getElementById('emailsingIn').value;
     const password = document.getElementById('passingIn').value;
     start(email, password);
-    // console.log('daaaaa');
   });
 
   return main;
