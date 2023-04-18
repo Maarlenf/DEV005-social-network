@@ -8,7 +8,11 @@ describe('home', () => {
   test('Is a function', () => {
     expect(typeof home).toBe('function');
   });
+<<<<<<< HEAD
   test('Create DOM', () => {
+=======
+  test('Create DOM whit button', () => {
+>>>>>>> e606a4c6a7944a347aa928108faaa7c705361cd8
     const DOM = document.createElement('form');
     DOM.append(home());
     const haveAButton = DOM.querySelector('#singUp');

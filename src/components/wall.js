@@ -12,9 +12,9 @@ function wall() {
   img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
-  textError.textContent = 'Página en Construccion';
+  textError.textContent = 'Página en construcción';
   textError.className = 'welcome';
-  buttonClose.textContent = 'Cerrar Sesiòn';
+  buttonClose.textContent = 'Cerrar Sesión';
   buttonClose.className = 'singOut';
   buttonClose.id = 'sinGout';
 
