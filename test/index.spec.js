@@ -3,16 +3,13 @@
  */
 
 import home from '../src/components/home';
+import register from '../src/components/register';
 
 describe('home', () => {
   test('Is a function', () => {
     expect(typeof home).toBe('function');
   });
-<<<<<<< HEAD
-  test('Create DOM', () => {
-=======
   test('Create DOM whit button', () => {
->>>>>>> e606a4c6a7944a347aa928108faaa7c705361cd8
     const DOM = document.createElement('form');
     DOM.append(home());
     const haveAButton = DOM.querySelector('#singUp');
@@ -29,5 +26,28 @@ describe('home', () => {
     password.value = '123456';
     start(email, password);
     expect(start).toHaveBeenCalledTimes(1);
+  });
+});
+describe('register', () => {
+  test('Is a function', () => {
+    expect(typeof register).toBe('function');
+  });
+  test('Create DOM whit button', () => {
+    const DOM = document.createElement('form');
+    DOM.append(register());
+    const haveAButton = DOM.querySelector('#singUp');
+    expect(haveAButton).not.toBe(undefined);
+  });
+  test('after submit form call addcount', () => {
+    const DOM = document.createElement('form');
+    DOM.append(register());
+    const form = DOM.querySelector('#formSingUp');
+    const email = form.querySelector('#emailsingUp');
+    const password = form.querySelector('#passingUp');
+    const addAccount = jest.fn();
+    email.value = 'jaja@jaja.com';
+    password.value = '123456';
+    addAccount(email, password);
+    expect(addAccount).toHaveBeenCalledTimes(1);
   });
 });
