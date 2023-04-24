@@ -1,4 +1,5 @@
 import { start } from '../lib/login';
+import { loginWithGoogle } from '../lib/google.js';
 
 // CREACION DE NODOS
 function home() {
@@ -86,6 +87,10 @@ function home() {
     const email = document.getElementById('emailsingIn').value;
     const password = document.getElementById('passingIn').value;
     start(email, password);
+    formSingin.reset();
+  });
+  buttonGoogle.addEventListener('click', () => {
+    loginWithGoogle();
   });
 
   return main;

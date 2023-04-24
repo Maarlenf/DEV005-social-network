@@ -1,5 +1,5 @@
-import logo from '../image/logo.png';
 import { addAccount } from '../lib/auth';
+import { loginWithGoogle } from '../lib/google';
 
 function register() {
   const main = document.createElement('main');
@@ -21,9 +21,8 @@ function register() {
   const pGoogle = document.createElement('p');
   const buttonGoogle = document.createElement('button');
   const google = document.createElement('div');
-
   // ATRIBUTOS
-  img.src = logo;
+  img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
   titleRegister.textContent = 'Registro';
@@ -65,7 +64,6 @@ function register() {
   buttonGoogle.id = 'googleSingup';
   buttonGoogle.className = 'googlesingU';
   google.className = 'google';
-
   // ABRIR ARCHIVOS
   main.append(header, sectionGeneral);
   header.append(img);
@@ -87,6 +85,10 @@ function register() {
     const email = document.getElementById('emailsingUp').value;
     const password = document.getElementById('passingUp').value;
     addAccount(email, password);
+    formSingUp.reset();
+  });
+  buttonGoogle.addEventListener('click', () => {
+    loginWithGoogle();
   });
   return main;
 }

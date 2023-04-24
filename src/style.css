@@ -37,6 +37,7 @@ body {
   
   :placeholder-shown {
     font-size: 17px;
+    letter-spacing: 1px;
   }
   
   .sing{
@@ -146,3 +147,87 @@ body {
     margin-top: -9px;
     margin-bottom: 1px;
 }
+.sectionWall{
+  display: flex;
+  flex-direction: column;
+}
+.formPost{
+  margin: 10%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.inNametext, .textPost{
+  margin-top: 7px;
+  font-size: 17px;
+  padding: 2%;
+}
+
+.btnPost{
+  padding: 2.2%;
+  margin-top: 1.5%;
+  border-radius: 8px;
+  background-color: #1c7888;
+  color: white;
+  font-size: 17px;
+}
+.singOut{
+  padding: 1.5%;
+  border-radius: 8px;
+  border-color: #1c7888;
+  border-width: 3px;
+  color: black;
+  font-size: 17px;
+  width: 35%;
+  align-self: center;
+}
+
+.imgWall{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.userInLine{
+  text-align: center;
+}
+
+.formPost{
+  margin-top: 10px;
+}
+
+.containerPost{
+  display:flex;
+  flex-flow: column nowrap;
+  border-top: 3px solid #C36DAB;
+  border-left: 3px solid #1c7888;
+  border-right: 3px solid #1c7888;
+  border-bottom: 3px solid #C36DAB;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.userInline{
+  align-self: center;
+  margin-bottom: 15px;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.hName, .hDescription{
+  text-align: start;
+  margin-top:1px;
+  font-size: 17px;
+}
+
+.pName, .pDescription{
+margin-top: -25px;
+font-size: 17px;
+}
+
+
