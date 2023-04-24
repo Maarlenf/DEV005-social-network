@@ -5,12 +5,21 @@ import {
   onSnapshot,
   query,
 } from 'firebase/firestore';
-// import { getAuth } from 'firebase/auth';
-import { db } from './firebaseConfig';
+import { db, auth } from './firebaseConfig';
+
+export const watchUser = () => {
+  const user = auth.currentUser;
+  const inLine = user.email;
+  return inLine;
+};
 
 // guardar post
-export const postIt = (nameCock, description) => {
-  addDoc(collection(db, 'postCocktailNetwork'), { nameCock, description });
+export const postIt = (nameCock, ingredients, preparation) => {
+  const user = auth.currentUser;
+  const inLine = user.email;
+  addDoc(collection(db, 'postCocktailNetwork'), {
+    inLine, nameCock, ingredients, preparation,
+  });
   // console.log(nameCock, description);
 };
 export const getpostIt = () => getDocs(collection(db, 'postCocktailNetwork'));

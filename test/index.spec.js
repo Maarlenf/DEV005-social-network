@@ -28,8 +28,9 @@ describe('home', () => {
     expect(start).toHaveBeenCalledTimes(1);
   });
 });
+
 describe('register', () => {
-  test('Is a function', () => {
+  test('Is a fuction', () => {
     expect(typeof register).toBe('function');
   });
   test('Create DOM whit button', () => {
@@ -38,7 +39,7 @@ describe('register', () => {
     const haveAButton = DOM.querySelector('#singUp');
     expect(haveAButton).not.toBe(undefined);
   });
-  test('after submit form call addcount', () => {
+  test('after submit form call addAcount', () => {
     const DOM = document.createElement('form');
     DOM.append(register());
     const form = DOM.querySelector('#formSingUp');

@@ -1,5 +1,4 @@
 import { start } from '../lib/login';
-import { loginWithGoogle } from '../lib/google';
 
 // CREACION DE NODOS
 function home() {
