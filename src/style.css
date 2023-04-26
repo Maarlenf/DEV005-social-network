@@ -6,11 +6,16 @@ body {
 
   .login {
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     margin-top: 3%;
     max-width: 90%;
     max-height: 90%;
+  }
+
+  .sectionGeneral{
+    margin:10px;
+    letter-spacing: 1.5px;
   }
 
   .welcome {
@@ -41,6 +46,7 @@ body {
   }
   
   .sing{
+    letter-spacing: 1.5px;
     width: 95%;
     height: 50%;
     padding: 2.2%;
@@ -52,16 +58,17 @@ body {
   }
 
   .aling{
-    margin-left:5px;
     margin-right: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: 1px;
   }
 
   .aRegister{
-    margin-left: 1%;
+    margin-left: 10px;
     font-size: 17px;
+    letter-spacing: 1px;
   }
 
   .pGoogle {
@@ -71,8 +78,9 @@ body {
   }
 
   .googlesingU {
+    letter-spacing: 1px;
+    margin-left: 2%;
     display: flex;
-    margin-left: 5px;
     margin-top: 1.7%;
     margin-bottom: 1%;
     width: 95%;
@@ -147,12 +155,17 @@ body {
     margin-top: -9px;
     margin-bottom: 1px;
 }
+
 .sectionWall{
   display: flex;
   flex-direction: column;
+  letter-spacing: 1.5px;
 }
+
 .formPost{
   margin: 10%;
+  margin-bottom: 15px;
+  margin-top: 5px;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -185,8 +198,8 @@ body {
 
 .imgWall{
   display: block;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   margin-top: 3%;
   max-width: 60%;
   max-height: 60%;
@@ -194,21 +207,21 @@ body {
 
 .userInLine{
   text-align: center;
-}
-
-.formPost{
-  margin-top: 10px;
+  font-size: 17px;
 }
 
 .containerPost{
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 25px;
   display:flex;
   flex-flow: column nowrap;
   border-top: 3px solid #C36DAB;
-  border-left: 3px solid #1c7888;
-  border-right: 3px solid #1c7888;
-  border-bottom: 3px solid #C36DAB;
-  border-radius: 25px;
-  margin-top: 20px;
+  border-left: 3px solid #C36DAB;
+  border-right: 3px solid #1C7888;
+  border-bottom: 3px solid #1C7888;
+  border-radius:25px 10px 25px 10px;
+  box-shadow: 10px 10px 10px gray;
   padding: 10px;
 }
 
@@ -229,5 +242,4 @@ body {
 margin-top: -25px;
 font-size: 17px;
 }
-
 

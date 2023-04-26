@@ -24,6 +24,7 @@ function home() {
   const google = document.createElement('div');
 
   // ATRIBUTOS
+  sectionGeneral.className = 'sectionGeneral';
   img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';

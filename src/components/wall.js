@@ -1,84 +1,155 @@
 import { closeSesion } from '../lib/close.js';
-import { watchUser, postIt, createSnapshot } from '../lib/post.js';
+import {
+  watchUser, postIt, createSanpshot,
+} from '../lib/post.js';
 
 function wall() {
   // CREANDO NODOS
   const sectionGeneral = document.createElement('section');
-  const img = document.createElement('img');
-  const userPost = document.createElement('h2');
-  const formWall = document.createElement('form');
-  const labelPost = document.createElement('label');
-  const inputNameCock = document.createElement('input');
-  const textAreaIngre = document.createElement('textarea');
-  const textAreaPrepa = document.createElement('textarea');
-  const buttonPost = document.createElement('button');
-  const postBlock = document.createElement('div');
-  const buttonClose = document.createElement('button');
-
-  // ATRIBUTOS
   sectionGeneral.className = 'sectionWall';
+  // const divGeneral = document.createElement('div');
+
+  const img = document.createElement('img');
   img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'imgWall';
-  userPost.textContent = watchUser();
-  userPost.className = 'userInLine';
-  formWall.className = 'formPost';
-  labelPost.id = 'labPost';
-  labelPost.className = 'labPostit';
-  inputNameCock.placeholder = 'Ponle nombre a tu Cocktail';
-  inputNameCock.className = 'inNametext';
-  inputNameCock.id = 'inName';
-  textAreaIngre.className = 'textPost';
-  textAreaIngre.placeholder = 'Ingredientes';
-  textAreaIngre.id = 'textIngre';
-  textAreaPrepa.className = 'textPost';
-  textAreaPrepa.placeholder = 'Preparación';
-  textAreaPrepa.id = 'textPrepa';
-  buttonPost.textContent = 'Post It !';
-  buttonPost.className = 'btnPost';
-  postBlock.className = 'posted';
-  postBlock.id = 'postBlock';
+
+  const userInLine = document.createElement('h2');
+  userInLine.textContent = watchUser();
+  userInLine.className = 'userInLine';
+
+  const buttonClose = document.createElement('button');
   buttonClose.textContent = 'Cerrar Sesión';
   buttonClose.className = 'singOut';
   buttonClose.id = 'sinGout';
 
-  // INSERTAR NODOS
-  sectionGeneral.append(img, userPost, buttonClose, formWall);
-  formWall.append(labelPost, inputNameCock, textAreaIngre, textAreaPrepa, buttonPost, postBlock);
+  buttonClose.addEventListener('click', () => {
+    closeSesion();
+  });
 
-  const printPost = (data) => {
-    // console.log(printPost);
-    let html = '';
-    data.forEach((doc) => {
-      const publication = doc;
-      html += `
-      <div class = 'containerPost'>
-           <h6 class = 'userInline'>${publication.inLine}</h6>
-           <h6 class = 'hName'>Nombre Cocktail</h5>
-           <p class = 'pName'>${publication.nameCock}</p>
-           <h6 class = 'hDescription'>Ingredientes</h5>
-           <p class= 'pDescription'>${publication.ingredients}</p>
-           <h6 class = 'hDescription'>Preparación</h5>
-           <p class= 'pDescription'>${publication.preparation}</p>
-      </div>
-      `;
-    });
-    postBlock.innerHTML = html;
-  };
-  createSnapshot(printPost);
+  const formWall = document.createElement('form');
+  formWall.className = 'formPost';
+
+  const labelPost = document.createElement('label');
+  labelPost.id = 'labPost';
+  labelPost.className = 'labPostit';
+
+  const inputNameCock = document.createElement('input');
+  inputNameCock.placeholder = 'Ponle nombre a tu Cocktail';
+  inputNameCock.className = 'inNametext';
+  inputNameCock.id = 'inName';
+
+  const textAreaIngre = document.createElement('textarea');
+  textAreaIngre.className = 'textPost';
+  textAreaIngre.placeholder = 'Ingredientes';
+  textAreaIngre.id = 'textIngre';
+
+  const textAreaPrepa = document.createElement('textarea');
+  textAreaPrepa.className = 'textPost';
+  textAreaPrepa.placeholder = 'Preparación';
+  textAreaPrepa.id = 'textPrepa';
+
+  const buttonPost = document.createElement('button');
+  buttonPost.textContent = 'Publicar';
+  buttonPost.className = 'btnPost';
+
+  const postBlock = document.createElement('div');
+  postBlock.className = 'posted';
+  postBlock.id = 'postBlock';
+
+  sectionGeneral.append(img, userInLine, buttonClose, formWall, postBlock);
+  formWall.append(
+    labelPost,
+    inputNameCock,
+    textAreaIngre,
+    textAreaPrepa,
+    buttonPost,
+  );
 
   formWall.addEventListener('submit', (e) => {
     e.preventDefault();
     const nameCock = document.getElementById('inName').value;
     const ingredientsPost = document.getElementById('textIngre').value;
     const preparationPost = document.getElementById('textPrepa').value;
-    postIt(nameCock, ingredientsPost, preparationPost);
+    postIt(nameCock, ingredientsPost, preparationPost, new Date());
     formWall.reset();
   });
 
-  buttonClose.addEventListener('click', () => {
-    closeSesion();
+  createSanpshot((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      const containerDiv = document.createElement('div');
+      containerDiv.className = 'containerPost';
+
+      console.log(doc.data());
+      const userPost = document.createElement('h6');
+      userPost.className = 'userInline';
+      userPost.textContent = doc.data().inLine;
+
+      const namePost = document.createElement('h6');
+      namePost.className = 'hName';
+      namePost.textContent = 'Nombre Cocktail:';
+
+      const nameDoc = document.createElement('p');
+      nameDoc.className = 'pName';
+      nameDoc.textContent = doc.data().nameCock;
+
+      const ingrePost = document.createElement('h6');
+      ingrePost.className = 'hDescription';
+      ingrePost.textContent = 'Ingredientes:';
+
+      const ingreDoc = document.createElement('p');
+      ingreDoc.className = 'pDescription';
+      ingreDoc.textContent = doc.data().ingredients;
+
+      const prepaPost = document.createElement('h6');
+      prepaPost.className = 'hDescription';
+      prepaPost.textContent = 'Preparación';
+
+      const prepaDoc = document.createElement('p');
+      prepaDoc.className = 'pDescription';
+      prepaDoc.textContent = doc.data().preparation;
+
+      const iconLike = document.createElement('span');
+      iconLike.className = 'material-symbols-outlined';
+      iconLike.textContent = 'thumb_up';
+      iconLike.setAttribute = ('like', doc.id);
+      console.log('data.id', doc.id);
+
+      containerDiv.append(
+        userPost,
+        namePost,
+        nameDoc,
+        ingrePost,
+        ingreDoc,
+        prepaPost,
+        prepaDoc,
+        iconLike,
+      );
+      postBlock.append(containerDiv);
+    });
   });
+  // eslint-disable-next-line no-undef
+  /*
+  createSanpshot((querySnapshot) => {
+    // const arraySection = [];
+    querySnapshot.forEach((doc) => {
+      console.log(doc);
+
+      containerDiv.append(userPost, namePost, nameDoc, ingrePost, ingreDoc, prepaPost, prepaDoc);
+      // arraySection.push(section);
+    });
+    // return divGeneral.append(...arraySection);
+  }); */
+
+  // INSERTAR NODOS
+
+  /* const font = document.getElementById('fontClick');
+  font.addEventListener('click', () => {
+    const count = countLike();
+    const sum = count + 1;
+    return sum;
+  }); */
+
   return sectionGeneral;
 }
 export default wall;

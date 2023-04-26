@@ -22,6 +22,7 @@ function register() {
   const buttonGoogle = document.createElement('button');
   const google = document.createElement('div');
   // ATRIBUTOS
+  sectionGeneral.className = 'sectionGeneral';
   img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
