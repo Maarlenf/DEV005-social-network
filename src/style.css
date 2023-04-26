@@ -12,6 +12,11 @@ body {
     max-height: 90%;
   }
 
+  .sectionWall{
+    margin: 10px;
+    letter-spacing: 1.5px;
+  }
+
   .welcome {
     text-align: center;
   }
@@ -40,6 +45,7 @@ body {
   }
   
   .sing{
+    letter-spacing: 1.5px;
     width: 95%;
     height: 50%;
     padding: 2.2%;
@@ -56,11 +62,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: 1px;
   }
 
   .aRegister{
     margin-left: 1%;
     font-size: 17px;
+    letter-spacing: 1px;
   }
 
   .pGoogle {
@@ -70,6 +78,7 @@ body {
   }
 
   .googlesingU {
+    letter-spacing: 1px;
     display: flex;
     margin-left: 5px;
     margin-top: 1.7%;
@@ -149,9 +158,12 @@ body {
 .sectionWall{
   display: flex;
   flex-direction: column;
+  letter-spacing: 1.5px;
 }
 .formPost{
   margin: 10%;
+  margin-bottom: 15px;
+  margin-top: 5px;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -193,21 +205,21 @@ body {
 
 .userInLine{
   text-align: center;
-}
-
-.formPost{
-  margin-top: 10px;
+  font-size: 17px;
 }
 
 .containerPost{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 25px;
   display:flex;
   flex-flow: column nowrap;
   border-top: 3px solid #C36DAB;
-  border-left: 3px solid #1c7888;
-  border-right: 3px solid #1c7888;
-  border-bottom: 3px solid #C36DAB;
-  border-radius: 25px;
-  margin-top: 20px;
+  border-left: 3px solid #C36DAB;
+  border-right: 3px solid #1C7888;
+  border-bottom: 3px solid #1C7888;
+  border-radius:25px 10px 25px 10px;
+  box-shadow: 10px 10px 10px gray;
   padding: 10px;
 }
 
@@ -229,4 +241,11 @@ margin-top: -25px;
 font-size: 17px;
 }
 
-
+.material-symbols-outlined {
+  cursor: pointer;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
