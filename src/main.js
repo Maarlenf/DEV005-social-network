@@ -15,7 +15,7 @@ const routes = [
   { path: '/wall', components: wall },
 ];
 
-const defaultRoute = '/';
+export const defaultRoute = '/';
 
 function navigateTo(hash) {
   const route = routes.find((routeFind) => routeFind.path === hash);
@@ -39,6 +39,7 @@ window.onpopstate = () => {
   navigateTo(window.location.pathname);
 };
 
+// navigateTo(window.location.pathname || defaultRoute);
 onAuthStateChanged(auth, (user) => {
   if (user) {
     navigateTo('/wall');

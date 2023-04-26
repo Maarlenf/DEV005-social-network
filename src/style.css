@@ -6,11 +6,16 @@ body {
 
   .login {
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     margin-top: 3%;
     max-width: 90%;
     max-height: 90%;
+  }
+
+  .sectionGeneral{
+    margin:10px;
+    letter-spacing: 1.5px;
   }
 
   .welcome {
@@ -37,9 +42,11 @@ body {
   
   :placeholder-shown {
     font-size: 17px;
+    letter-spacing: 1px;
   }
   
   .sing{
+    letter-spacing: 1.5px;
     width: 95%;
     height: 50%;
     padding: 2.2%;
@@ -51,16 +58,17 @@ body {
   }
 
   .aling{
-    margin-left:5px;
     margin-right: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: 1px;
   }
 
   .aRegister{
-    margin-left: 1%;
+    margin-left: 10px;
     font-size: 17px;
+    letter-spacing: 1px;
   }
 
   .pGoogle {
@@ -70,8 +78,9 @@ body {
   }
 
   .googlesingU {
+    letter-spacing: 1px;
+    margin-left: 2%;
     display: flex;
-    margin-left: 5px;
     margin-top: 1.7%;
     margin-bottom: 1%;
     width: 95%;
@@ -146,3 +155,91 @@ body {
     margin-top: -9px;
     margin-bottom: 1px;
 }
+
+.sectionWall{
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1.5px;
+}
+
+.formPost{
+  margin: 10%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.inNametext, .textPost{
+  margin-top: 7px;
+  font-size: 17px;
+  padding: 2%;
+}
+
+.btnPost{
+  padding: 2.2%;
+  margin-top: 1.5%;
+  border-radius: 8px;
+  background-color: #1c7888;
+  color: white;
+  font-size: 17px;
+}
+.singOut{
+  padding: 1.5%;
+  border-radius: 8px;
+  border-color: #1c7888;
+  border-width: 3px;
+  color: black;
+  font-size: 17px;
+  width: 35%;
+  align-self: center;
+}
+
+.imgWall{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3%;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.userInLine{
+  text-align: center;
+  font-size: 17px;
+}
+
+.containerPost{
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 25px;
+  display:flex;
+  flex-flow: column nowrap;
+  border-top: 3px solid #C36DAB;
+  border-left: 3px solid #C36DAB;
+  border-right: 3px solid #1C7888;
+  border-bottom: 3px solid #1C7888;
+  border-radius:25px 10px 25px 10px;
+  box-shadow: 10px 10px 10px gray;
+  padding: 10px;
+}
+
+.userInline{
+  align-self: center;
+  margin-bottom: 15px;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.hName, .hDescription{
+  text-align: start;
+  margin-top:1px;
+  font-size: 17px;
+}
+
+.pName, .pDescription{
+margin-top: -25px;
+font-size: 17px;
+}
+

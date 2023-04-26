@@ -1,4 +1,5 @@
 import { start } from '../lib/login';
+import { loginWithGoogle } from '../lib/google.js';
 
 // CREACION DE NODOS
 function home() {
@@ -23,6 +24,7 @@ function home() {
   const google = document.createElement('div');
 
   // ATRIBUTOS
+  sectionGeneral.className = 'sectionGeneral';
   img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
@@ -86,6 +88,10 @@ function home() {
     const email = document.getElementById('emailsingIn').value;
     const password = document.getElementById('passingIn').value;
     start(email, password);
+    formSingin.reset();
+  });
+  buttonGoogle.addEventListener('click', () => {
+    loginWithGoogle();
   });
 
   return main;
