@@ -4,17 +4,18 @@ import {
   getDocs,
   onSnapshot,
   query,
-  doc,
-  updateDoc,
-  deleteDoc,
+  // doc,
+  // updateDoc,
+  // deleteDoc,
   orderBy,
-  arrayUnion,
-  arrayRemove,
+  // arrayUnion,
+  // arrayRemove,
 } from 'firebase/firestore';
 import { db, auth } from './firebaseConfig';
 
 export const watchUser = () => {
   const user = auth.currentUser;
+  console.log(user);
   const inLine = user.email;
   console.log(inLine);
   return inLine;
@@ -39,6 +40,7 @@ export const createSanpshot = (callback) => onSnapshot(query(collectionPost, ord
 // export const countLike = (id, user) => updateDoc(doc(db, 'postCocktailNetwork', id), {
 //  likes: arrayUnion(user),
 // });
+
 /* xport const deletePost = (docRef) => deleteDoc(doc(db, 'postCocktailNetwork', docRef));
 
 export const updatePost = (docRef, data) => updateDoc(docRef, data);
