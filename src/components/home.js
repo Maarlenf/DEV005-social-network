@@ -1,10 +1,12 @@
 import { start } from '../lib/login';
+import { loginWithGoogle } from '../lib/google.js';
 
 // CREACION DE NODOS
 function home() {
   const main = document.createElement('main');
   const header = document.createElement('header');
-  const sectionGeneral = document.createElement('section');
+  const sectionGeneral = document.createElement('div');
+  const divContainer = document.createElement('div');
   const img = document.createElement('img');
   const labelWelcome = document.createElement('label');
   const titleWelcome = document.createElement('h2');
@@ -23,6 +25,8 @@ function home() {
   const google = document.createElement('div');
 
   // ATRIBUTOS
+  sectionGeneral.className = 'sectionGeneral';
+  divContainer.className = 'divContainer';
   img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
@@ -68,7 +72,8 @@ function home() {
   // APLICACION APPEND
   main.append(header, sectionGeneral);
   header.append(img);
-  sectionGeneral.append(
+  sectionGeneral.append(divContainer);
+  divContainer.append(
     labelWelcome,
     formSingin,
     buttonSingIn,

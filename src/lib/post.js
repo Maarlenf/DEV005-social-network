@@ -16,37 +16,40 @@ import { db, auth } from './firebaseConfig';
 export const watchUser = () => {
   const user = auth.currentUser;
   const inLine = user.email;
-  console.log(inLine);
-  return inLine;
+  const cutName = inLine.indexOf('@');
+  const show = inLine.substring(0, cutName);
+  return show;
 };
 
 export const collectionPost = collection(db, 'postCocktailNetwork');
 console.log(collectionPost);
 
 // creamos los llaves del post
-export const postIt = (nameCock, ingredients, preparation, date) => addDoc(collection(db, 'postCocktailNetwork'), {
+export const postIt = (nameCock, ingredients, preparation, date, likes) => addDoc(collection(db, 'postCocktailNetwork'), {
   inLine: watchUser(),
   nameCock,
   ingredients,
   preparation,
   date,
+  likes,
 });
 
 export const querySnapshot = getDocs(collectionPost);
+console.log(querySnapshot);
+
 // creamos función de escucha inmediata para luego imprimir
 export const createSanpshot = (callback) => onSnapshot(query(collectionPost, orderBy('date', 'desc')), callback);
 
-/* xport const deletePost = (docRef) => deleteDoc(doc(db, 'postCocktailNetwork', docRef));
+export const countLike = (id, user) => updateDoc((doc(db, 'postCocktailNetwork', id)), { likes: arrayUnion(user) });
 
-export const updatePost = (docRef, data) => updateDoc(docRef, data);
+export const removeLike = (id, user) => updateDoc((doc(db, 'postCocktailNetwork', id)), { likes: arrayRemove(user) });
 
-export const countLike = (id, user) => updateDoc(doc(db, 'postCocktailNetwork', id), {
-  likes: arrayUnion(user),
+export const updatePost = (id, nameCock, ingredients, preparation) => updateDoc((doc(db, 'postCocktailNetwork', id)), {
+  nameCock, ingredients, preparation,
 });
 
-export const removeLike = (id, user) => updateDoc(doc(db, 'postCocktailNetwork', id), {
-  likes: arrayRemove(user),
-}); */
+export const removePost = (data) => deleteDoc(doc(db, 'postCocktailNetwork', data));
+
 /* export const countLike = (result) => {
   const unsub = onSnapshot(q, (s) => {
     const dataCount = [];
