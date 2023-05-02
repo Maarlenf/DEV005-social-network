@@ -1,8 +1,66 @@
 body {
     margin: 0px;
+    margin-bottom: 30px;
     padding: 0px;
     font-family: "Ubuntu", sans-serif;
   }
+
+  @media (min-width: 800px) {
+    body{
+      margin-bottom: 30px;
+    }
+
+    main{
+      margin-top: 13%;
+      display: flex;
+      justify-content: center;
+    }
+
+    header{
+      max-width: 43%;
+      max-height: 80%;
+      margin-top: auto;
+      margin-bottom: auto;
+      }
+
+      .sectionGeneral{
+        max-height: 100%;
+        margin-top: 20px;
+      }
+
+      .divContainer {
+        border: 2px solid #1C7888;
+        border-radius:10px 10px 10px 10px;
+        margin-top: 20px;
+        max-width: 380px;
+        padding: 6px;
+      }
+
+      .container{
+        padding: 5px;
+      }
+
+      .containerWall {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+      }
+      
+      .imgWall{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 5%;
+        max-width: 60%;
+        max-height: 60%;
+      }
+    
+      .sectionWall {
+        display: flex;
+        justify-content: center;
+      }
+
+    }
 
   .login {
     display: block;
@@ -16,6 +74,7 @@ body {
   .sectionGeneral{
     margin:10px;
     letter-spacing: 1.5px;
+    font-size: 17px;
   }
 
   .welcome {
@@ -185,16 +244,6 @@ body {
   color: white;
   font-size: 17px;
 }
-.singOut{
-  padding: 1.5%;
-  border-radius: 8px;
-  border-color: #1c7888;
-  border-width: 3px;
-  color: black;
-  font-size: 17px;
-  width: 35%;
-  align-self: center;
-}
 
 .imgWall{
   display: block;
@@ -205,10 +254,17 @@ body {
   max-height: 60%;
 }
 
+.divExit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .userInLine{
   text-align: center;
   font-size: 17px;
-}
+  margin-right: 10px;
+} 
 
 .containerPost{
   margin-right: 10%;
@@ -216,20 +272,11 @@ body {
   margin-top: 25px;
   display:flex;
   flex-flow: column nowrap;
-  border-top: 3px solid #C36DAB;
-  border-left: 3px solid #C36DAB;
-  border-right: 3px solid #1C7888;
-  border-bottom: 3px solid #1C7888;
-  border-radius:25px 10px 25px 10px;
+  border-top: 3px solid #1C7888;
+  border-left: 3px solid #1C7888;
+  border-radius:25px 10px 10px 10px;
   box-shadow: 10px 10px 10px gray;
   padding: 10px;
-}
-
-.userInline{
-  align-self: center;
-  margin-bottom: 15px;
-  font-size: 17px;
-  margin-top: 5px;
 }
 
 .hName, .hDescription{
@@ -241,5 +288,92 @@ body {
 .pName, .pDescription{
 margin-top: -25px;
 font-size: 17px;
+}
+
+.divUser{
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+}
+
+.containerIconEdit{
+  display: flex;
+}
+
+.userPostInline{
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.countainerLike{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 20px;
+ }
+
+span.size-28{
+  font-size: 25px;
+  font-variation-settings: 'OPSZ' 28;
+ }
+
+ .numLike{
+  font-size: 21px;
+ }
+ 
+ span.size-30{
+  font-size: 30px;
+  font-variation-settings: 'OPSZ' 30, ;
+ }
+ 
+ .modal {
+  max-width: 70vw;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.innerClose {
+  border-right: 3px solid #1C7888;
+  border-bottom: 3px solid #1C7888;
+  border-radius:25px 10px 25px 10px;
+  box-shadow: 10px 10px 10px gray;
+  background:white;
+  padding: 20px;
+  width: 640px;
+  text-align: center;
+}
+.containerClose{
+  color: black;
+  text-align: right;
+  font-size: 10px;
+}
+
+.divUserEdit{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  margin-bottom: 10px;
+}
+
+.userInlineEdit{
+  font-size: 17px;
+}
+
+.buttonEdit, .deletePost{
+  align-self: flex-end;
+  padding: 2.2%;
+  width: 25%;
+  margin-top: 3%;
+  border-radius: 8px;
+  background-color: #1c7888;
+  color: white;
+  font-size: 17px;
 }
 
