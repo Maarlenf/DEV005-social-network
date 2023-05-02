@@ -4,7 +4,8 @@ import { loginWithGoogle } from '../lib/google';
 function register() {
   const main = document.createElement('main');
   const header = document.createElement('header');
-  const sectionGeneral = document.createElement('section');
+  const sectionGeneral = document.createElement('div');
+  const divContainer = document.createElement('div');
   const img = document.createElement('img');
   const labelRegister = document.createElement('label');
   const titleRegister = document.createElement('h2');
@@ -23,6 +24,7 @@ function register() {
   const google = document.createElement('div');
   // ATRIBUTOS
   sectionGeneral.className = 'sectionGeneral';
+  divContainer.className = 'divContainer';
   img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
@@ -68,7 +70,8 @@ function register() {
   // ABRIR ARCHIVOS
   main.append(header, sectionGeneral);
   header.append(img);
-  sectionGeneral.append(
+  sectionGeneral.append(divContainer);
+  divContainer.append(
     labelRegister,
     formSingUp,
     buttonSingUp,

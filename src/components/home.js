@@ -5,7 +5,8 @@ import { loginWithGoogle } from '../lib/google.js';
 function home() {
   const main = document.createElement('main');
   const header = document.createElement('header');
-  const sectionGeneral = document.createElement('section');
+  const sectionGeneral = document.createElement('div');
+  const divContainer = document.createElement('div');
   const img = document.createElement('img');
   const labelWelcome = document.createElement('label');
   const titleWelcome = document.createElement('h2');
@@ -25,10 +26,11 @@ function home() {
 
   // ATRIBUTOS
   sectionGeneral.className = 'sectionGeneral';
+  divContainer.className = 'divContainer';
   img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
-  titleWelcome.textContent = 'Bienvenido';
+  titleWelcome.textContent = 'Bienvenidos';
   titleWelcome.className = 'welcome';
   formSingin.className = 'container';
   formSingin.id = 'formSingIn';
@@ -69,8 +71,9 @@ function home() {
 
   // APLICACION APPEND
   main.append(header, sectionGeneral);
+  sectionGeneral.append(divContainer);
   header.append(img);
-  sectionGeneral.append(
+  divContainer.append(
     labelWelcome,
     formSingin,
     buttonSingIn,
