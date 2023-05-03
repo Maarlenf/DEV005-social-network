@@ -12,6 +12,7 @@ body {
 
     main{
       margin-top: 8%;
+      margin-bottom: 30%;
       display: flex;
       justify-content: center;
     }
