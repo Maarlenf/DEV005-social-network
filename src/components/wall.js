@@ -45,7 +45,7 @@ function wall() {
   labelPost.className = 'labPostit';
 
   const inputNameCock = document.createElement('input');
-  inputNameCock.placeholder = 'Ponle nombre a tu Cocktail';
+  inputNameCock.placeholder = 'Nombre de tu Cocktail';
   inputNameCock.className = 'inNametext';
   inputNameCock.id = 'inName';
 

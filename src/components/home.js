@@ -62,7 +62,7 @@ function home() {
   pSingUp.className = 'pSingup';
   aLink.className = 'aRegister';
   aLink.href = '/register';
-  aLink.textContent = ' Registrate';
+  aLink.textContent = ' Regístrate';
   pGoogle.textContent = 'También Puedes';
   pGoogle.className = 'pGoogle';
   buttonGoogle.textContent = 'Continuar con Google';
