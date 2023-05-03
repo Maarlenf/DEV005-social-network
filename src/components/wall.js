@@ -164,7 +164,7 @@ function wall() {
       innerClose.className = 'innerClose';
 
       const messageAlert = document.createElement('p');
-      messageAlert.textContent = 'Al realizar esta acción se eliminara de forma permanente tu Cocktail. ¿Estás seguro que lo quieres eliminar?';
+      messageAlert.textContent = 'Al realizar esta acción se eliminará de forma permanente tu Cocktail. ¿Estás seguro que lo quieres eliminar?';
       messageAlert.className = 'messageAlert';
 
       const deletePost = document.createElement('button');

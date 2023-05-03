@@ -367,8 +367,7 @@ span.size-28{
   font-size: 17px;
 }
 
-.buttonEdit, .deletePost{
-  align-self: flex-end;
+.buttonEdit{
   padding: 2.2%;
   width: 25%;
   margin-top: 3%;
