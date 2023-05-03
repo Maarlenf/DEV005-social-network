@@ -11,7 +11,7 @@ body {
     }
 
     main{
-      margin-top: 8%;
+      margin-top: 13%;
       display: flex;
       justify-content: center;
     }
@@ -239,7 +239,7 @@ body {
 
 .btnPost{
   padding: 2.2%;
-  margin-top: 4%;
+  margin-top: 1.5%;
   border-radius: 8px;
   background-color: #1c7888;
   color: white;
@@ -273,8 +273,7 @@ body {
   margin-top: 25px;
   display:flex;
   flex-flow: column nowrap;
-  border-top: 3px solid #1C7888;
-  border-left: 3px solid #1C7888;
+  border: 3px solid #1C7888;
   border-radius:25px 10px 10px 10px;
   box-shadow: 10px 10px 10px gray;
   padding: 10px;
@@ -368,7 +367,6 @@ span.size-28{
 }
 
 .buttonEdit{
-  align-self: flex-end;
   padding: 2.2%;
   width: 25%;
   margin-top: 3%;
@@ -379,14 +377,12 @@ span.size-28{
 }
 
 .deletePost{
+  text-align: center;
   padding: 2.2%;
-  width: 25%;
+  width: 30%;
   margin-top: 3%;
   border-radius: 8px;
   background-color: #1c7888;
   color: white;
   font-size: 17px;
 }
-
-
-
