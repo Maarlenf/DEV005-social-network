@@ -12,10 +12,10 @@ function wall() {
   containerImgform.className = 'containerImgform';
   const sectionPost = document.createElement('div');
   sectionPost.className = 'sectionWall';
-  // const divGeneral = document.createElement('div');
 
   const containerImg = document.createElement('div');
   containerImg.className = 'containerImg';
+
   const img = document.createElement('img');
   img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
@@ -265,6 +265,7 @@ function wall() {
       );
 
       postBlock.append(containerDiv, containerDivEdit);
+
       if (doc.data().likes.length > 0) {
         numLike.style.display = 'flex';
       } else {

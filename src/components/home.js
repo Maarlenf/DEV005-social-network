@@ -30,7 +30,7 @@ function home() {
   img.src = '../image/logo.png';
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
-  titleWelcome.textContent = 'Bienvenido';
+  titleWelcome.textContent = 'Bienvenidos';
   titleWelcome.className = 'welcome';
   formSingin.className = 'container';
   formSingin.id = 'formSingIn';
@@ -71,8 +71,8 @@ function home() {
 
   // APLICACION APPEND
   main.append(header, sectionGeneral);
-  header.append(img);
   sectionGeneral.append(divContainer);
+  header.append(img);
   divContainer.append(
     labelWelcome,
     formSingin,

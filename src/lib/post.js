@@ -22,7 +22,6 @@ export const watchUser = () => {
 };
 
 export const collectionPost = collection(db, 'postCocktailNetwork');
-console.log(collectionPost);
 
 // creamos los llaves del post
 export const postIt = (nameCock, ingredients, preparation, date, likes) => addDoc(collection(db, 'postCocktailNetwork'), {
@@ -35,8 +34,7 @@ export const postIt = (nameCock, ingredients, preparation, date, likes) => addDo
 });
 
 export const querySnapshot = getDocs(collectionPost);
-console.log(querySnapshot);
-
+// console.log(querySnapshot);
 // creamos función de escucha inmediata para luego imprimir
 export const createSanpshot = (callback) => onSnapshot(query(collectionPost, orderBy('date', 'desc')), callback);
 
