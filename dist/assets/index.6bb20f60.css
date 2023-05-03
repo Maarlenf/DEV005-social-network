@@ -11,7 +11,7 @@ body {
     }
 
     main{
-      margin-top: 8%;
+      margin-top: 13%;
       display: flex;
       justify-content: center;
     }
@@ -80,20 +80,7 @@ body {
   .welcome {
     text-align: center;
   }
-
-  .sectionGeneral {
-    max-height: 100%;
-    margin-top: 20px;
-  }
-
-  .divContainer {
-    border: 2px solid #1C7888;
-    border-radius: 10px 10px 10px 10px;
-    margin-top: 20px;
-    max-width: 380px;
-    padding: 6px;
-  }
-
+  
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -230,10 +217,7 @@ body {
 
 .sectionWall{
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-around;
-  align-content: center;
   letter-spacing: 1.5px;
 }
 
@@ -253,108 +237,7 @@ body {
   resize: none;
 }
 
-:placeholder-shown {
-  font-size: 17px;
-  letter-spacing: 1px;
-}
-
-.sing {
-  letter-spacing: 1.5px;
-  width: 95%;
-  height: 50%;
-  padding: 2.2%;
-  margin-top: 4%;
-  border-radius: 8px;
-  background-color: #1c7888;
-  color: white;
-  font-size: 17px;
-}
-
-.pSingup {
-  font-size: 17px;
-}
-
-.error {
-  display: flex;
-  flex-flow: column;
-  text-align: center;
-}
-
-.aHome {
-  font-size: 24px;
-  margin-top: 1%;
-}
-
-.google {
-  order: -1;
-  position: relative;
-  border-top: 5px solid #EA4335;
-  border-right: 5px solid #4285F4;
-  border-bottom: 5px solid #34A853;
-  border-left: 5px solid #FBBC05;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  width: 12px;
-  height: 12px;
-  padding: 0;
-  margin-right: 5px;
-}
-
-.google::before {
-  content: "";
-  z-index: 100;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-30%);
-  margin-left: -2px;
-  width: 8px;
-  height: 45%;
-  background: #4285F4;
-}
-
-.google::after {
-  content: "";
-  z-index: 101;
-  position: absolute;
-  border-top: 15px solid transparent;
-  border-right: 15px solid #eeeeee;
-  top: -10px;
-  right: -10px;
-  width: 0;
-  height: 0;
-}
-
-.pError,
-.pErrorIn {
-  color: red;
-  text-align: center;
-  margin-top: -9px;
-  margin-bottom: 1px;
-}
-
-.sectionWall {
-  display: flex;
-  flex-direction: column;
-  letter-spacing: 1.5px;
-}
-
-.formPost {
-  margin: 10%;
-  margin-bottom: 15px;
-  margin-top: 5px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-}
-
-.inNametext,
-.textPost {
-  margin-top: 7px;
-  font-size: 17px;
-  padding: 2%;
-}
-
-.btnPost {
+.btnPost{
   padding: 2.2%;
   margin-top: 1.5%;
   border-radius: 8px;
@@ -363,7 +246,7 @@ body {
   font-size: 17px;
 }
 
-.imgWall {
+.imgWall{
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -403,15 +286,9 @@ body {
   font-size: 17px;
 }
 
-.buttonEdit, .deletePost {
-  align-self: flex-end;
-  padding: 2.2%;
-  width: 25%;
-  margin-top: 3%;
-  border-radius: 8px;
-  background-color: #1c7888;
-  color: white;
-  font-size: 17px;
+.pName, .pDescription{
+margin-top: -25px;
+font-size: 17px;
 }
 
 .divUser{
@@ -490,7 +367,7 @@ span.size-28{
   font-size: 17px;
 }
 
-.buttonEdit{
+.buttonEdit, .deletePost{
   align-self: flex-end;
   padding: 2.2%;
   width: 25%;
@@ -510,15 +387,3 @@ span.size-28{
   color: white;
   font-size: 17px;
 }
-
-.deletePost{
-  padding: 2.2%;
-  width: 25%;
-  margin-top: 3%;
-  border-radius: 8px;
-  background-color: #1c7888;
-  color: white;
-  font-size: 17px;
-}
-
-
