@@ -1,3 +1,4 @@
+import logo from '../image/logo.png';
 import { addAccount } from '../lib/auth';
 import { loginWithGoogle } from '../lib/google';
 
@@ -25,7 +26,7 @@ function register() {
   // ATRIBUTOS
   sectionGeneral.className = 'sectionGeneral';
   divContainer.className = 'divContainer';
-  img.src = '../image/logo.png';
+  img.src = logo;
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
   titleRegister.textContent = 'Registro';

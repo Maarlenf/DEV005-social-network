@@ -1,3 +1,4 @@
+import logo from '../image/logo.png';
 import { start } from '../lib/login';
 import { loginWithGoogle } from '../lib/google.js';
 
@@ -27,7 +28,7 @@ function home() {
   // ATRIBUTOS
   sectionGeneral.className = 'sectionGeneral';
   divContainer.className = 'divContainer';
-  img.src = '../image/logo.png';
+  img.src = logo;
   img.alt = 'Logo Cocktail Network';
   img.className = 'login';
   titleWelcome.textContent = 'Bienvenidos';

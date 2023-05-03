@@ -1,3 +1,4 @@
+import logo from '../image/logo.png';
 import { closeSesion } from '../lib/close.js';
 import {
   removePost,
@@ -17,7 +18,7 @@ function wall() {
   containerImg.className = 'containerImg';
 
   const img = document.createElement('img');
-  img.src = '../image/logo.png';
+  img.src = logo;
   img.alt = 'Logo Cocktail Network';
   img.className = 'imgWall';
 
