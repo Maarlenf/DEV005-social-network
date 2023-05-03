@@ -11,8 +11,7 @@ body {
     }
 
     main{
-      margin-top: 8%;
-      margin-bottom: 30%;
+      margin-top: 10%;
       display: flex;
       justify-content: center;
     }
