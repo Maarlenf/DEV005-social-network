@@ -87,90 +87,17 @@ describe('wall', () => {
     expect(closeConfig.closeSesion).toHaveBeenCalledTimes(1);
   });
   test('have form to create doc', () => {
-    // jest.spyOn(postConfig, 'postIt').mockImplementation(() => jest.fn());
+    jest.spyOn(postConfig, 'postIt').mockImplementation(() => {});
     const DOM = document.createElement('div');
     DOM.append(wall());
     const form = DOM.querySelector('.formPost');
-    const postIt = jest.fn();
     const nameCock = DOM.querySelector('#inName');
     const ingredientsPost = DOM.querySelector('#textIngre');
     const preparationPost = DOM.querySelector('#textPrepa');
     nameCock.value = 'Berries';
     ingredientsPost.value = 'frutos rojos';
     preparationPost.value = 'juntar';
-    postIt(nameCock, ingredientsPost, preparationPost, new Date(), []);
-    expect(postIt).toHaveBeenCalledTimes(1);
-    // expect(postIt).toHaveBeenCalledTimes(1);
-  });
-  test('addEventListener', () => {
-    const DOM = document.createElement('div');
-    DOM.append(wall());
-    const formWall = DOM.querySelector('.formPost');
-    const addEventListener = jest.fn();
-    formWall.addEventListener((event, callback) => {
-      callback();
-    });
-    /* document.addEventListener = jest
-      .fn()
-      .mockImplementationOnce((event, callback) => {
-        callback();
-      }); */
-    expect(addEventListener).toHaveCalled('submit', expect.any(Function));
-    // expect(addEventListener).toHaveCalled(event, expect.any(Function));
+    form.submit();
+    expect(postConfig.postIt).toHaveBeenCalledTimes(1);
   });
 });
-
-/* describe('pruebas eventListeners', () => {
-  test('postIt', () => {
-    jest.spyOn(postConfig, 'postIt').mockImplementation((nameCock,
-       ingredients, preparation, date, likes) => ({
-      inLine: postConfig.watchUser,
-      nameCock: 'Berries',
-      ingredients: 'frutos rojos',
-      preparation: 'juntar',
-      date: new Date(),
-      likes,
-    }));
-    const DOM = document.createElement('div');
-    DOM.append(wall());
-    const form = DOM.querySelector('.formPost');
-    const nameCock = DOM.querySelector('#inName');
-    const ingredientsPost = DOM.querySelector('#textIngre');
-    const preparationPost = DOM.querySelector('#textPrepa');
-    nameCock.value = 'Berries';
-    ingredientsPost.value = 'frutos rojos';
-    preparationPost.value = 'juntar';
-    // const postIt = jest.fn();
-    form.submit();
-    const añadir = DOM.querySelector('.posted');
-    añadir.textContent = postConfig.postIt;
-    /* postIt(
-      nameCock,
-      ingredientsPost,
-      preparationPost,
-      new Date(),
-      [],
-    );
-    postConfig.postIt((nameCock, ingredientsPost, preparationPost, 'sábado', []));
-    expect(nameCock.value).toBe('Berries');
-    expect(postConfig.postIt).toHaveBeenCalledTimes(1);
-    expect(añadir).not.toBe(false);
-  });
-  test('createSnapshot', () => {
-    jest.spyOn(postConfig, 'createSanpshot').mockImplementation(() => jest.fn());
-    const DOM = document.createElement('div');
-    DOM.append(wall());
-    const añadir = DOM.querySelector('.posted');
-    añadir.append(postConfig.createSanpshot);
-    expect(postConfig.createSanpshot).toHaveBeenCalledTimes(1);
-  });
-  /* test('createSnapshot', () => {
-    jest.spyOn(postConfig, 'createSanpshot').mockImplementation(() => jest.fn());
-    const DOM = document.createElement('div');
-    DOM.append(wall());
-    const añadir = DOM.querySelector('.posted');
-    añadir.textContent = postConfig.createSanpshot;
-    const iconExit = añadir.querySelector('.countainerLike');
-    expect(añadir).toBe(undefined);
-  });
-}); */
