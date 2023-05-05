@@ -19,6 +19,7 @@ describe('home', () => {
     expect(haveAButton).not.toBe(undefined);
   });
   test('after submit form call start', () => {
+    // jest.spyOn(addConfig, 'start').mockImplementation(() => jest.fn());
     const DOM = document.createElement('form');
     DOM.append(home());
     const form = DOM.querySelector('#formSingIn');
@@ -28,6 +29,7 @@ describe('home', () => {
     email.value = 'jaja@jaja.com';
     password.value = '123456';
     start(email, password);
+    // form.submit(addConfig.start);
     expect(start).toHaveBeenCalledTimes(1);
   });
 });

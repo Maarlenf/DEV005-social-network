@@ -82,9 +82,9 @@ function wall() {
 
   formWall.addEventListener('submit', (e) => {
     e.preventDefault();
-    const nameCock = document.getElementById('inName').value;
-    const ingredientsPost = document.getElementById('textIngre').value;
-    const preparationPost = document.getElementById('textPrepa').value;
+    const nameCock = inputNameCock.value;
+    const ingredientsPost = textAreaIngre.value;
+    const preparationPost = textAreaPrepa.value;
     postIt(nameCock, ingredientsPost, preparationPost, new Date(), []);
     formWall.reset();
   });

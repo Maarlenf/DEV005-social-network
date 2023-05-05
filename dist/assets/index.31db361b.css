@@ -1,0 +1,388 @@
+body {
+    margin: 0px;
+    margin-bottom: 30px;
+    padding: 0px;
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  @media (min-width: 800px) {
+    body{
+      margin-bottom: 30px;
+    }
+
+    main{
+      margin-top: 13%;
+      display: flex;
+      justify-content: center;
+    }
+
+    header{
+      max-width: 43%;
+      max-height: 80%;
+      margin-top: auto;
+      margin-bottom: auto;
+      }
+
+      .sectionGeneral{
+        max-height: 100%;
+        margin-top: 20px;
+      }
+
+      .divContainer {
+        border: 2px solid #1C7888;
+        border-radius:10px 10px 10px 10px;
+        margin-top: 20px;
+        max-width: 380px;
+        padding: 6px;
+      }
+
+      .container{
+        padding: 5px;
+      }
+
+      .containerWall {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+      }
+      
+      .imgWall{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 5%;
+        max-width: 60%;
+        max-height: 60%;
+      }
+    
+      .sectionWall {
+        display: flex;
+        justify-content: center;
+      }
+
+    }
+
+  .login {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3%;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .sectionGeneral{
+    margin:10px;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+  }
+
+  .welcome {
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+  }
+ 
+  .text {
+    width: 90%;
+    height: 50px;
+    padding-left: 4%;
+    border: 2px solid #1c7888;
+    border-radius: 5px;
+    margin-block-start: 1%;
+    margin-block-end: 3%;
+  }
+  
+  :placeholder-shown {
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+  
+  .sing{
+    letter-spacing: 1.5px;
+    width: 95%;
+    height: 50%;
+    padding: 2.2%;
+    margin-top: 1.5%;
+    border-radius: 8px;
+    background-color: #1c7888;
+    color: white;
+    font-size: 17px;
+  }
+
+  .aling{
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+  }
+
+  .aRegister{
+    margin-left: 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+
+  .pGoogle {
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+
+  .googlesingU {
+    letter-spacing: 1px;
+    margin-left: 2%;
+    display: flex;
+    margin-top: 1.7%;
+    margin-bottom: 1%;
+    width: 95%;
+    height: 50%;
+    padding: 2%;
+    border-radius: 8px;
+    border-color: #1c7888;
+    border-width: 3px;
+    color: black;
+    font-size: 17px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .pSingup{
+    font-size: 17px;
+  }
+  
+  .error{
+    display : flex;
+    flex-flow: column;
+    text-align: center;
+  }
+
+  .aHome{
+    font-size: 24px;
+    margin-top: 1%;
+  }
+ 
+  .google{
+    order: -1;
+    position: relative;
+    border-top: 5px solid #EA4335;
+    border-right: 5px solid #4285F4;
+    border-bottom: 5px solid #34A853;
+    border-left: 5px solid #FBBC05;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    margin-right: 5px;
+  }
+  
+  .google::before {
+    content: "";
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    margin-left: -2px;
+    width: 8px;
+    height: 45%;
+    background: #4285F4;
+  }
+  
+  .google::after {
+    content: "";
+    z-index: 101;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-right: 15px solid #eeeeee;
+    top: -10px;
+    right: -10px;
+    width: 0;
+    height: 0;
+  }
+
+.pError, .pErrorIn{
+    color: red;
+    text-align: center;
+    margin-top: -9px;
+    margin-bottom: 1px;
+}
+
+.sectionWall{
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1.5px;
+}
+
+.formPost{
+  margin: 10%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.inNametext, .textPost{
+  margin-top: 10px;
+  font-size: 17px;
+  padding: 2%;
+  resize: none;
+}
+
+.btnPost{
+  padding: 2.2%;
+  margin-top: 1.5%;
+  border-radius: 8px;
+  background-color: #1c7888;
+  color: white;
+  font-size: 17px;
+}
+
+.imgWall{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3%;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.divExit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userInLine{
+  text-align: center;
+  font-size: 17px;
+  margin-right: 10px;
+} 
+
+.containerPost{
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 25px;
+  display:flex;
+  flex-flow: column nowrap;
+  border-top: 3px solid #1C7888;
+  border-left: 3px solid #1C7888;
+  border-radius:25px 10px 10px 10px;
+  box-shadow: 10px 10px 10px gray;
+  padding: 10px;
+}
+
+.hName, .hDescription{
+  text-align: start;
+  margin-top:1px;
+  font-size: 17px;
+}
+
+.pName, .pDescription{
+margin-top: -25px;
+font-size: 17px;
+}
+
+.divUser{
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+}
+
+.containerIconEdit{
+  display: flex;
+}
+
+.userPostInline{
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.countainerLike{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 20px;
+ }
+
+span.size-28{
+  font-size: 25px;
+  font-variation-settings: 'OPSZ' 28;
+ }
+
+ .numLike{
+  font-size: 21px;
+ }
+ 
+ span.size-30{
+  font-size: 30px;
+  font-variation-settings: 'OPSZ' 30, ;
+ }
+ 
+ .modal {
+  max-width: 70vw;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.innerClose {
+  border-right: 3px solid #1C7888;
+  border-bottom: 3px solid #1C7888;
+  border-radius:25px 10px 25px 10px;
+  box-shadow: 10px 10px 10px gray;
+  background:white;
+  padding: 20px;
+  width: 640px;
+  text-align: center;
+}
+.containerClose{
+  color: black;
+  text-align: right;
+  font-size: 10px;
+}
+
+.divUserEdit{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  margin-bottom: 10px;
+}
+
+.userInlineEdit{
+  font-size: 17px;
+}
+
+.buttonEdit{
+  padding: 2.2%;
+  width: 25%;
+  margin-top: 3%;
+  border-radius: 8px;
+  background-color: #1c7888;
+  color: white;
+  font-size: 17px;
+}
+
+.deletePost{
+  padding: 2.2%;
+  width: 25%;
+  margin-top: 3%;
+  border-radius: 8px;
+  background-color: #1c7888;
+  color: white;
+  font-size: 17px;
+}
