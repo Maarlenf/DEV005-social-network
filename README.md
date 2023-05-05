@@ -37,11 +37,11 @@ Nuestro proyecto se trabajo durante todo el proceso de manera colaborativa con I
 
 Según la investigación previa a realizar el proyecto determinamos las siguientes historias de usuario:
 
-* H1 .- Yo como usuario de Cockatail Network quiero poder registrarme en la plataforma para tener una cuenta. La necesidad de nuestro usuario esta basada en el poder registrarse e iniciar su experiencia con esta.
+* HU1 .- Yo como usuario de Cockatail Network quiero poder registrarme en la plataforma para tener una cuenta. La necesidad de nuestro usuario esta basada en el poder registrarse e iniciar su experiencia con esta.
 
-* H2.- Yo como usuario de Cocktail Network quiero poder ingresar a la plataforma con mi email y constraseña o con cuenta Google para poder ir a publicar. La necesidad de nuestro usuario esta basada en el poder ingresar a la plataforma para pdoer crear publicaciones o interactuar con otras publicaciones.
+* HU2.- Yo como usuario de Cocktail Network quiero poder ingresar a la plataforma con mi email y constraseña o con cuenta Google para poder ir a publicar. La necesidad de nuestro usuario esta basada en el poder ingresar a la plataforma para pdoer crear publicaciones o interactuar con otras publicaciones.
 
-* H3.- Yo como usuario de Cocktail Network quiero poder crear una publicación para mostrar mi receta. En esta historia detectamos varias necesidades, la principal es poder crear una publicación, luego en ella poder editarla, borrarla y tener me gusta junto su respectio conteo. Dimos enfoque a la propiedad de cada publicación ya que las acciones mencionadas excepto el dar me gusta, solo las ejecuta el dueño de la publicación.
+* HU3.- Yo como usuario de Cocktail Network quiero poder crear una publicación para mostrar mi receta. En esta historia detectamos varias necesidades, la principal es poder crear una publicación, luego en ella poder editarla, borrarla y tener me gusta junto su respectio conteo. Dimos enfoque a la propiedad de cada publicación ya que las acciones mencionadas excepto el dar me gusta, solo las ejecuta el dueño de la publicación.
 
-Para mayor información pueden visitar nuestro planning redactado.
+Para mayor información pueden visitar nuestro planning redactado.- https://trello.com/b/5seXUOMk/historias-de-usuario-cocktail-network
 
