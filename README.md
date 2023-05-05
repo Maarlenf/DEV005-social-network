@@ -40,7 +40,7 @@ Para poder apreciar mas el de alta fidelidad => https://www.figma.com/file/jHHvA
 * Implementamos router de navegación entre las diferentes vistas de la plataforma. 
 * Empleamos el servicio de Firebase, con el aplicamos el inicio de sesión con email y contraseña, el registro,poder iniciar sesión mediante Google, y cerrar sesión. dentro de Firebase llamamos a Firestore para poder crear nuestra colección y así los usuarios pudiesen hacer sus publicaciones, registrar su fecha de creación, contador de me gusta, y mostrarlo en el muro de manera descendiente según su fecha de creación y pueden editar o borrar su aplicación, todo esto se muestra de manera instantanea sin necesidad de refrescar el sitio. 
 * Nuestra plataforma se desplego mediante el servicio de Firebase, Hosting.
-* El proyecto completo se trabajo de acuerdo a las historias de usuario bajo la metodología SCRUM, lo cual nos permitio ir recibiendo feedback constante sobre nuestro trabajo e ir haciendo los test de usabilidad y test unitarios antes de seguir con la siguiente historia.
+* El proyecto completo se trabajo de acuerdo a las historias de usuario bajo la metodología SCRUM, lo cual nos permitio ir recibiendo feedback constante sobre nuestro trabajo e ir haciendo los test de usabilidad y test unitarios antes de seguir con la siguiente historia (test unitarios estan en ramas marlen e indira).
 * Se llevaron a cabo servicios de GitHub como el de git tag. Se crearon dos versiones.
  
 
