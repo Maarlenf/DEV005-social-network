@@ -1,4 +1,5 @@
 # Creando una Red Social
+![logo-prototipo](https://user-images.githubusercontent.com/124700237/236561806-0c11373f-ae34-476d-9a4a-3ddfccb430c6.png)
 
 ## Índice
 
@@ -23,8 +24,14 @@ Nuestro proyecto se trabajo durante todo el proceso de manera colaborativa con I
 
 Diseñamos prototipos de baja y alta fidelidad con el objetivo de siempre ir adquiriendo feedback y poder realizar test de usabilidad. 
 
+PROTIPOS BAJA FIDELIDAD
+![prototipo-baja1](https://user-images.githubusercontent.com/124700237/236561858-8d4e7427-93ed-4e56-a3e2-e7042d1c8760.png)
+![prototipo-baja2](https://user-images.githubusercontent.com/124700237/236561862-40931cf8-1b99-4686-a8e5-c874102cebf5.png)
+
+PROTOTIPO ALTA FIDELIDAD
 ![prototipo-alta](https://user-images.githubusercontent.com/124700237/236561182-a494fa6e-978a-4766-b936-e772f6a9d042.png)
 
+Para poder apreciar mas el de alta fidelidad => https://www.figma.com/file/jHHvAiuT9rvyqyWrOJDin0/Sign-Up-%2F-Sign-In-Screens---UI-Design-(Community)?type=design&node-id=0-1&t=UczqfsXMGdwCvgS2-0
 
 ### 3.- Objetivos de aprendizaje logrados
 
