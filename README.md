@@ -21,6 +21,10 @@ La plataforma permite a los usuarios poder registrarse, iniciar sesión e ingres
 
 Nuestro proyecto se trabajo durante todo el proceso de manera colaborativa con Indira Davoin.- https://github.com/HicoTico 
 
+Diseñamos prototipos de baja y alta fidelidad con el objetivo de siempre ir adquiriendo feedback y poder realizar test de usabilidad. 
+
+![prototipo-alta](https://user-images.githubusercontent.com/124700237/236561182-a494fa6e-978a-4766-b936-e772f6a9d042.png)
+
 
 ### 3.- Objetivos de aprendizaje logrados
 
