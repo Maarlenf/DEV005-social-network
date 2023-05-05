@@ -31,6 +31,7 @@ function wall() {
   const iconExit = document.createElement('span');
   iconExit.className = 'material-symbols-outlined';
   iconExit.textContent = 'logout';
+  iconExit.id = 'iconExit';
 
   iconExit.addEventListener('click', () => {
     closeSesion();
