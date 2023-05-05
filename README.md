@@ -12,26 +12,16 @@
 * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
 
 ## 1. Preámbulo
-
-HOLAAAAAAAAAAA![estaSI](https://user-images.githubusercontent.com/124700237/236500974-7cf9f2b6-c740-485d-b324-5f935796d609.png){width='50px' height='50px'} 
-
-
-![adem-ay-Tk9m_HP4rgQ-unsplash](https://user-images.githubusercontent.com/110297/135544666-4efa54f1-4ff6-4c4c-b398-6df04ef56117.jpg)
-
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
-
+ 
+ Las redes sociales estan creciendo cada vez más y más, lo cual esta llamando a personas de distintas culturas y edades a ser participes de ellas. Lo cual nos ha motivado a aventurarnos a estructurar una y poder consolidarla.
+ 
+ ![app-cocktail-network-p](https://user-images.githubusercontent.com/124700237/236531880-588c3402-dc7b-476b-90e1-f5811af8f26b.jpg)
+ 
 ## 2. Resumen del proyecto
 
-En este proyecto construirás una Red Social sobre lo que decidan tú y tu equipo.
-Podría ser, por ejemplo, sobre alimentación saludable, feminismo, educación,
-salud, energías renovables, amantes de las [Empanadas](https://es.wikipedia.org/wiki/Empanada)
-o de los [Tacos de Canasta](https://es.wikipedia.org/wiki/Taco),
-de la [Feijoada](https://es.wikipedia.org/wiki/Feijoada), o de lo que sea.
+Nuestro proyecto esta basado en la necesidad de usuarios que les guste crear y recrear recetas de cocktail (tragos o bocadillos) y poder compartirlas con otros afisionados. Para consolidar nuestra idea se llevo a cabo una instigación previa, mediante encuestas y de acuerdo a esto diseñamos las historias de usuario, siguiendo los principios de UX/UI. 
+
+La plataforma permite a los usuarios poder registrares, iniciar sesiòn e ingresar con sus cuentas google preexisentes, asi entrar un muro de publicaciones donde pueden postear su receta interactuar
 
 Tu Red Social tendrá que permitir a cualquier usuario crear una cuenta de acceso
 y loguearse con ella; crear, editar, borrar y _"likear"_ publicacciones.
